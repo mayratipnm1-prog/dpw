@@ -1,46 +1,49 @@
 <?php
+$con = new mysqli("localhost", "root", "", "db_praktik");
 
-require_once "database.php";
-$db = new Database();
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+$queries = [
+    "t_login" => "CREATE TABLE IF NOT EXISTS t_login (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(30) NOT NULL,
+        password VARCHAR(50) NOT NULL,
+        email VARCHAR(50),
+        tgl_registrasi TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )",
+    "t_dosen" => "CREATE TABLE IF NOT EXISTS t_dosen (
+        idDosen INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        namaDosen VARCHAR(50) NOT NULL,
+        noHP VARCHAR(25) NOT NULL
+    )",
+    "t_mahasiswa" => "CREATE TABLE IF NOT EXISTS t_mahasiswa (
+        npm INT PRIMARY KEY,
+        namaMhs VARCHAR(50) NOT NULL,
+        prodi VARCHAR(25) NOT NULL,
+        alamat VARCHAR(70) NOT NULL,
+        noHP VARCHAR(25) NOT NULL
+    )",
+    "t_matakuliah" => "CREATE TABLE IF NOT EXISTS t_matakuliah (
+        kodeMK INT PRIMARY KEY,
+        namaMK VARCHAR(70) NOT NULL,
+        sks INT NOT NULL
+    )"
+];
 
 $hasil = [];
+foreach ($queries as $nama => $q) {
+    $result = $con->query($q);
+    if ($result === TRUE) {
+        $hasil[] = ["nama" => $nama, "status" => "Tabel $nama berhasil dibuat (atau sudah ada)"];
+    } else {
+        $hasil[] = ["nama" => $nama, "status" => "Tabel $nama gagal dibuat: " . $con->error];
+    }
+}
 
-$hasil[] = [
-    'nama' => 't_login',
-    'status' => $db->createTableLogin()
-];
-
-$hasil[] = [
-    'nama' => 't_dosen',
-    'status' => $db->createTable("t_dosen", "
-        idDosen INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        namaDosen VARCHAR(100) NOT NULL,
-        noHP VARCHAR(15) NOT NULL
-    ")
-];
-
-$hasil[] = [
-    'nama' => 't_mahasiswa',
-    'status' => $db->createTable("t_mahasiswa", "
-        npm VARCHAR(20) PRIMARY KEY,
-        namaMhs VARCHAR(100) NOT NULL,
-        prodi VARCHAR(100) NOT NULL,
-        alamat TEXT NOT NULL,
-        noHP VARCHAR(15) NOT NULL
-    ")
-];
-
-$hasil[] = [
-    'nama' => 't_matakuliah',
-    'status' => $db->createTable("t_matakuliah", "
-        kodeMK VARCHAR(20) PRIMARY KEY,
-        namaMK VARCHAR(100) NOT NULL,
-        sks INT(2) NOT NULL,
-        jam INT(2) NOT NULL
-    ")
-];
-
-$db->closeConnection();
+// menutup koneksi
+$con->close();
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -63,7 +66,7 @@ $db->closeConnection();
                 </a>
                 <div>
                     <h2 class="text-lg font-bold text-slate-800">Pembuatan Tabel</h2>
-                    <p class="text-xs text-slate-500">Otomatis membuat tabel database</p>
+                    <p class="text-xs text-slate-500">Otomatis membuat tabel database sesuai modul</p>
                 </div>
             </div>
 
@@ -73,7 +76,7 @@ $db->closeConnection();
                         <i class="fas fa-circle-info text-blue-500 mt-0.5"></i>
                         <div class="text-sm text-blue-700">
                             <p class="font-semibold mb-1">Informasi</p>
-                            <p class="text-xs leading-relaxed">File ini akan membuat semua tabel yang dibutuhkan sistem. Jika tabel sudah ada, sistem akan melewati pembuatan.</p>
+                            <p class="text-xs leading-relaxed">File ini membuat semua tabel sesuai skema modul praktikum 12. Jika tabel sudah ada, sistem akan melewati pembuatan.</p>
                         </div>
                     </div>
                 </div>
@@ -88,7 +91,11 @@ $db->closeConnection();
                             <h3 class="text-sm font-semibold text-slate-800"><?php echo htmlspecialchars($item['nama']); ?></h3>
                             <p class="text-xs text-slate-500"><?php echo htmlspecialchars($item['status']); ?></p>
                         </div>
-                        <i class="fas fa-check-circle text-emerald-500"></i>
+                        <?php if (strpos($item['status'], 'gagal') !== false): ?>
+                            <i class="fas fa-times-circle text-rose-500"></i>
+                        <?php else: ?>
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                        <?php endif; ?>
                     </div>
                     <?php endforeach; ?>
                 </div>

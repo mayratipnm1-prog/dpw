@@ -1,23 +1,22 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $username = "root";
-    private $password = ""; 
-    private $database = "db_praktik";
+    private $user = "root";
+    private $paswd = "";
+    private $name = "db_praktik";
     public $con;
 
     public function __construct() {
-        $this->con = new mysqli($this->host, $this->username, $this->password, $this->database);
-
+        $this->con = new mysqli($this->host, $this->user, $this->paswd, $this->name);
         if ($this->con->connect_error) {
             die("Koneksi Database Gagal: " . $this->con->connect_error);
         }
     }
 
-    // ==========================================
-    // FITUR BARU: Membuat tabel otomatis
-    // Sesuai referensi materi dosen
-    // ==========================================
+    public function getConnection() {
+        return $this->con;
+    }
+
     public function createTable($tableName, $sqlColumns) {
         $sql = "CREATE TABLE IF NOT EXISTS $tableName ($sqlColumns)";
         $result = $this->con->query($sql);
@@ -29,10 +28,6 @@ class Database {
         }
     }
 
-    // ==========================================
-    // FITUR BARU: Membuat tabel t_login
-    // Sesuai referensi materi dosen
-    // ==========================================
     public function createTableLogin() {
         $sql = "CREATE TABLE IF NOT EXISTS t_login (
             id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
