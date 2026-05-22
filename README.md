@@ -53,10 +53,3 @@ dpw/
 > Semua kode ditulis sendiri berdasarkan materi yang diberikan dosen pengampu.  
 
 ---
-
-<div align="center">
-
-**Made with ❤️ by Mayra Ruhandini**  
-*Politeknik Negeri Madiun — 2026*
-
-</div>
