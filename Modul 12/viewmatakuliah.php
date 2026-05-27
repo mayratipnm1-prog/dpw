@@ -55,7 +55,6 @@ $totalMK = $semuaMK ? $semuaMK->num_rows : 0;
         <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
                 <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Data Mata Kuliah</h1>
-                <p class="text-sm text-slate-500 mt-1">Manajemen informasi mata kuliah terintegrasi</p>
             </div>
             <div class="flex items-center gap-3">
                 <div class="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-rose-200/60 shadow-sm">
@@ -63,7 +62,7 @@ $totalMK = $semuaMK ? $semuaMK->num_rows : 0;
                     <span class="text-xs font-medium text-slate-600">Database Connected</span>
                 </div>
                 <a href="inputmatakuliah.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-rose-400 to-pink-600 hover:from-rose-500 hover:to-pink-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-lg shadow-rose-500/25 transition-all btn-press">
-                    <i class="fas fa-plus text-sm"></i> Tambah MK
+                    <i class="fas fa-plus text-sm"></i> Tambah Mata Kuliah
                 </a>
             </div>
         </div>

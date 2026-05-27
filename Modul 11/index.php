@@ -1,8 +1,5 @@
 <?php
-// ==========================================
-// INDEX.PHP - Dashboard Modul 11
-// Arsitektur: Prosedural MySQLi
-// ==========================================
+
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -39,7 +36,6 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 
-        <!-- Header -->
         <div class="text-center mb-12">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200/60 text-xs text-slate-600 mb-6">
                 <i class="fas fa-layer-group text-blue-500"></i>
@@ -50,13 +46,8 @@
             <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
                 Selamat Datang di <span class="text-blue-600">SIAKAD</span>
             </h1>
-            <p class="text-slate-500 max-w-xl mx-auto">
-                Sistem Informasi Akademik dengan arsitektur Prosedural MySQLi. 
-                Pilih menu di bawah untuk mengelola data.
-            </p>
         </div>
 
-        <!-- Menu Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
 
             <!-- DOSEN -->
@@ -74,7 +65,6 @@
                 </div>
             </a>
 
-            <!-- MAHASISWA -->
             <a href="viewmahasiswa.php" class="group">
                 <div class="glass rounded-2xl p-8 shadow-lg shadow-emerald-200/30 border border-white/60 card-hover h-full">
                     <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-6 group-hover:scale-110 transition-transform">
@@ -89,7 +79,6 @@
                 </div>
             </a>
 
-            <!-- MATA KULIAH -->
             <a href="viewmatakuliah.php" class="group">
                 <div class="glass rounded-2xl p-8 shadow-lg shadow-indigo-200/30 border border-white/60 card-hover h-full">
                     <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-500/20 mb-6 group-hover:scale-110 transition-transform">
@@ -105,7 +94,6 @@
             </a>
         </div>
 
-        <!-- Info Section -->
         <div class="glass rounded-2xl p-6 shadow-lg border border-white/60">
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 shrink-0">
@@ -126,11 +114,9 @@
             </div>
         </div>
 
-        <!-- Footer -->
         <div class="text-center mt-12">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 border border-slate-200/40 text-xs text-slate-400">
-                <i class="fas fa-code"></i>
-                <span>SIAKAD Modul 11 - Prosedural MySQLi</span>
+                <span>253307003 - Mayra Ruhandini</span>
             </div>
         </div>
     </div>

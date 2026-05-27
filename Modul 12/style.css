@@ -1,11 +1,5 @@
-/* ==========================================
-   SIAKAD Modul 12 - External Stylesheet
-   ========================================== */
-
-/* === Google Font Import === */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* === Base === */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +10,6 @@ body {
   min-height: 100vh;
 }
 
-/* === Page Themes (background gradients) === */
 body.theme-dosen {
   background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 50%, #f5f3ff 100%);
 }
@@ -29,7 +22,6 @@ body.theme-matakuliah {
   background: linear-gradient(135deg, #fff1f2 0%, #fce7f3 50%, #fdf2f8 100%);
 }
 
-/* === Glassmorphism === */
 .glass {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
@@ -37,12 +29,10 @@ body.theme-matakuliah {
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/* === Button Press Effect === */
 .btn-press:active {
   transform: scale(0.96);
 }
 
-/* === Scrollbar === */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -59,7 +49,6 @@ body.theme-matakuliah ::-webkit-scrollbar-thumb {
 }
 
 
-/* === Card Hover (untuk index.php) === */
 .card-hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

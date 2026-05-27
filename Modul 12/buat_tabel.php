@@ -42,7 +42,6 @@ foreach ($queries as $nama => $q) {
     }
 }
 
-// menutup koneksi
 $con->close();
 ?>
 <!DOCTYPE html>

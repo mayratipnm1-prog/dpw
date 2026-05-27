@@ -50,10 +50,9 @@ $total = mysqli_num_rows($result);
         <div class="mb-8 animate-fade-in flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
                 <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Data Mata Kuliah</h1>
-                <p class="text-sm text-slate-500 mt-1">Kelola informasi mata kuliah secara terintegrasi</p>
             </div>
             <a href="input_matakuliah.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-lg shadow-indigo-500/25 transition-all btn-press animate-slide-in-right">
-                <i class="fas fa-plus text-sm"></i> Tambah MK
+                <i class="fas fa-plus text-sm"></i> Tambah Mata Kuliah
             </a>
         </div>
 

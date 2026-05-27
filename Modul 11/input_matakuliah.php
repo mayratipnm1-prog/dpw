@@ -25,7 +25,7 @@
             <form action="proses_inputmatakuliah.php" method="post" class="p-6 space-y-4">
                 <div>
                     <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2"><i class="fas fa-barcode text-slate-400 mr-1.5 text-[10px]"></i>Kode MK</label>
-                    <input type="text" name="kodeMK" required placeholder="Contoh: MK001" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 input-focus-indigo transition-all text-sm font-mono">
+                    <input type="text" name="kodeMK" required placeholder="Contoh: 1,2,3,dst" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 input-focus-indigo transition-all text-sm font-mono">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2"><i class="fas fa-book text-slate-400 mr-1.5 text-[10px]"></i>Nama Mata Kuliah</label>

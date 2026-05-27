@@ -2,7 +2,7 @@
 require_once ('kelas/akunBank.php');
 
 $data1 = new akunBank(nomorAkun: "001", nominal: 10000);
-$data1->setNama("Arinda Mardianti");
+$data1->setNama("Mayra Ruhandini");
 
 $data2 = new akunBank(nomorAkun: "002", nominal: 10000);
 $data2->setNama("Mendysia Anggita Putri");
@@ -38,7 +38,10 @@ $akuns = [
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Praktikum 10 — Akun Bank</title>
-  <?php include 'style.php'; ?>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 </head>
 <body>
 
@@ -60,7 +63,7 @@ $akuns = [
       <div class="card-body" style="padding:0">
         <table class="data-table">
           <thead>
-            <tr><th>Keterangan</th><th>Nominal</th></tr>
+            <tr><th style="width:55%; padding:16px 20px; text-align:left;">Keterangan</th><th style="width:45%; padding:16px 20px; text-align:right; padding-right:24px;">Nominal</th></tr>
           </thead>
           <tbody>
             <?php foreach ($item['log'] as $row):
@@ -74,8 +77,8 @@ $akuns = [
               };
             ?>
             <tr class="<?= $cls ?>">
-              <td><?= htmlspecialchars($row['keterangan']) ?></td>
-              <td>
+              <td style="padding:18px 20px; line-height:1.6;"><?= htmlspecialchars($row['keterangan']) ?></td>
+              <td style="padding:18px 20px; text-align:right; padding-right:24px; white-space:nowrap;">
                 <?php if ($row['type'] === 'error'): ?>
                   <span class="badge badge-red"><?= htmlspecialchars($row['nominal']) ?></span>
                 <?php else: ?>

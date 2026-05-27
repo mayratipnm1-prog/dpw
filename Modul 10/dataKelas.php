@@ -27,7 +27,10 @@ $daftar = [$mhs1, $mhs2, $mhs3];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Praktikum 10 — Data Kelas</title>
-  <?php include 'style.php'; ?>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 </head>
 <body>
 
@@ -48,25 +51,25 @@ $daftar = [$mhs1, $mhs2, $mhs3];
       <table class="data-table">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Nama</th>
-            <th>NIM</th>
-            <th>NIK (warisan)</th>
-            <th>Jurusan</th>
-            <th>Kelas</th>
-            <th>Umur</th>
+            <th style="width:40px; padding:16px 14px; text-align:center;">#</th>
+            <th style="min-width:160px; padding:16px 20px; white-space:nowrap;">Nama</th>
+            <th style="min-width:110px; padding:16px 20px; white-space:nowrap;">NIM</th>
+            <th style="min-width:170px; padding:16px 20px; white-space:nowrap;">NIK (warisan)</th>
+            <th style="min-width:150px; padding:16px 20px;">Jurusan</th>
+            <th style="min-width:90px; padding:16px 20px; white-space:nowrap;">Kelas</th>
+            <th style="min-width:80px; padding:16px 20px; white-space:nowrap; padding-right:24px;">Umur</th>
           </tr>
         </thead>
         <tbody>
           <?php foreach ($daftar as $i => $m): ?>
           <tr>
-            <td style="color:var(--muted)"><?= $i + 1 ?></td>
-            <td><strong><?= htmlspecialchars($m->getNama()) ?></strong></td>
-            <td><span class="badge badge-blue"><?= htmlspecialchars($m->getNIM()) ?></span></td>
-            <td style="font-size:12px;color:var(--muted)"><?= $m->getNIK() ?></td>
-            <td><?= htmlspecialchars($m->getJurusan()) ?></td>
-            <td><?= htmlspecialchars($m->getKelas()) ?></td>
-            <td><?= htmlspecialchars($m->getUmur()) ?> th</td>
+            <td style="color:var(--muted); padding:18px 14px; text-align:center;"><?= $i + 1 ?></td>
+            <td style="padding:18px 20px; white-space:nowrap;"><strong><?= htmlspecialchars($m->getNama()) ?></strong></td>
+            <td style="padding:18px 20px; white-space:nowrap;"><span class="badge badge-blue"><?= htmlspecialchars($m->getNIM()) ?></span></td>
+            <td style="font-size:12px; color:var(--muted); padding:18px 20px; white-space:nowrap;"><?= $m->getNIK() ?></td>
+            <td style="padding:18px 20px;"><?= htmlspecialchars($m->getJurusan()) ?></td>
+            <td style="padding:18px 20px; white-space:nowrap;"><?= htmlspecialchars($m->getKelas()) ?></td>
+            <td style="padding:18px 20px; white-space:nowrap; padding-right:24px;"><?= htmlspecialchars($m->getUmur()) ?> th</td>
           </tr>
           <?php endforeach; ?>
         </tbody>

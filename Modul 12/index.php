@@ -36,7 +36,6 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 
-        <!-- Header -->
         <div class="text-center mb-12">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200/60 text-xs text-slate-600 mb-6">
                 <i class="fas fa-layer-group text-amber-500"></i>
@@ -47,10 +46,6 @@
             <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
                 Selamat Datang di <span class="text-amber-600">SIAKAD</span>
             </h1>
-            <p class="text-slate-500 max-w-xl mx-auto">
-                Sistem Informasi Akademik dengan arsitektur OOP dan Prepared Statements. 
-                Pilih menu di bawah untuk mengelola data.
-            </p>
         </div>
 
         <div class="mb-2 px-1">
@@ -119,7 +114,6 @@
         <div class="glass rounded-2xl p-6 shadow-lg shadow-slate-200/40 border border-white/60">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-                <!-- DOSEN -->
                 <a href="viewdosen.php" class="group block">
                     <div class="bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-md transition-all h-full">
                         <div class="flex items-center gap-3 mb-3">
@@ -128,12 +122,8 @@
                             </div>
                             <div>
                                 <h3 class="text-sm font-bold text-slate-800">Data Dosen</h3>
-                                <span class="text-[10px] text-slate-400">CRUD + Search</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">
-                            Kelola informasi dosen dengan keamanan SQL Injection melalui Prepared Statements.
-                        </p>
                         <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600">
                             Akses Menu <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                         </span>
@@ -148,12 +138,8 @@
                             </div>
                             <div>
                                 <h3 class="text-sm font-bold text-slate-800">Data Mahasiswa</h3>
-                                <span class="text-[10px] text-slate-400">CRUD + Search</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">
-                            Kelola biodata mahasiswa dengan class Database OOP yang terstruktur.
-                        </p>
                         <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600">
                             Akses Menu <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                         </span>
@@ -168,12 +154,8 @@
                             </div>
                             <div>
                                 <h3 class="text-sm font-bold text-slate-800">Data Mata Kuliah</h3>
-                                <span class="text-[10px] text-slate-400">CRUD + Search</span>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-500 leading-relaxed mb-3">
-                            Kelola mata kuliah dengan validasi duplikat kode MK dan error handling.
-                        </p>
                         <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-rose-600">
                             Akses Menu <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
                         </span>
@@ -206,7 +188,7 @@
         <div class="text-center mt-12">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/40 border border-slate-200/40 text-xs text-slate-400">
                 <i class="fas fa-code"></i>
-                <span>SIAKAD Modul 12 - OOP + Prepared Statements</span>
+                <span>253307003 - Mayra Ruhandini</span>
             </div>
         </div>
     </div>

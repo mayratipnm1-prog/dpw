@@ -55,7 +55,6 @@ $totalDosen = $semuaDosen->num_rows;
         <div class="mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
                 <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Data Dosen</h1>
-                <p class="text-sm text-slate-500 mt-1">Manajemen informasi dosen terintegrasi</p>
             </div>
             <div class="flex items-center gap-3">
                 <div class="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-200/60 shadow-sm">

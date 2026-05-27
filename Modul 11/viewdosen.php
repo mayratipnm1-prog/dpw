@@ -25,7 +25,6 @@ $total = mysqli_num_rows($result);
 </head>
 <body class="theme-dosen text-slate-700 antialiased">
 
-    <!-- Navbar -->
     <nav class="sticky top-0 z-40 glass border-b border-slate-200/60 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between h-16 items-center">
@@ -56,14 +55,12 @@ $total = mysqli_num_rows($result);
         <div class="mb-8 animate-fade-in flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
                 <h1 class="text-3xl font-bold text-slate-900 tracking-tight">Data Dosen</h1>
-                <p class="text-sm text-slate-500 mt-1">Kelola informasi dosen secara terintegrasi</p>
             </div>
             <a href="input.php" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-lg shadow-blue-500/25 transition-all btn-press animate-slide-in-right">
                 <i class="fas fa-plus text-sm"></i> Tambah Dosen
             </a>
         </div>
 
-        <!-- Toast -->
         <?php if ($flash): ?>
         <div class="mb-6 animate-slide-in-right" id="toast">
             <div class="flex items-start gap-3 p-4 rounded-xl border bg-white shadow-lg <?php echo $flash['type']=='success'?'border-emerald-200':'border-rose-200'; ?>">
@@ -79,7 +76,6 @@ $total = mysqli_num_rows($result);
         </div>
         <?php endif; ?>
 
-        <!-- Stats -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 animate-slide-up">
             <div class="glass rounded-xl p-5 shadow-sm flex items-center justify-between">
                 <div>
@@ -104,7 +100,6 @@ $total = mysqli_num_rows($result);
             </div>
         </div>
 
-        <!-- Table -->
         <div class="glass rounded-2xl shadow-lg shadow-slate-200/40 border border-white/60 overflow-hidden animate-slide-up" style="animation-delay:0.1s">
             <div class="overflow-x-auto">
                 <table class="w-full text-left">
@@ -157,7 +152,6 @@ $total = mysqli_num_rows($result);
         </div>
     </div>
 
-    <!-- Delete Modal -->
     <div id="deleteModal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onclick="closeDeleteModal()"></div>
         <div class="flex items-center justify-center min-h-screen p-4">
